@@ -1,0 +1,67 @@
+<div class='container-fluid' ng-controller='PaintingsCNTRLR'>
+    <div class='row'>    
+        <div class='col-xs-12 col-sm-12 col-lg-12 col-md-offset-3'>
+            <h3>Gallery</h3>
+        </div>
+    </div>
+    
+    <div class='row'>    
+        <div class='col-xs-5 col-sm-3 col-lg-2'>
+            <ul class='nav nav-pills nav-stacked' role='tablist'>
+                <li role="presentation" ng-class="{active:isSelected(1)}">
+                    <a ng-click="select(1)" aria-controls="portrait" role="tab">
+                        Portrait</a></li>
+                <li role="presentation" ng-class="{active:isSelected(2)}">
+                    <a ng-click="select(2)" aria-controls="life" role="tab">
+                        Nudes</a></li>
+                <li role="presentation" ng-class="{active:isSelected(3)}">
+                    <a ng-click="select(3)" aria-controls="still" role="tab">
+                        Still Life</a></li>
+                <li role="presentation" ng-class="{active:isSelected(4)}">
+                    <a ng-click="select(4)" aria-controls="drawings" role="tab">
+                        Portrait drawings</a></li>
+                <li role="presentation" ng-class="{active:isSelected(5)}">
+                    <a ng-click="select(5)" aria-controls="etchings" role="tab">
+                        Etchings</a></li>
+                <li role="presentation" ng-class="{active:isSelected(6)}">
+                    <a ng-click="select(6)" aria-controls="orchestra" role="tab">
+                        Musicians</a></li>
+                <li role="presentation" ng-class="{active:isSelected(7)}">
+                    <a ng-click="select(7)" aria-controls="portraitegypt" role="tab">
+                        Portrait of Egypt</a></li>
+            </ul>
+        </div>
+        <div class='col-xs-7 col-sm-9 col-lg-10'>
+            
+            <h5 ng-if="!showPaintings"><span class="sr-only">Loading Paintings...</span><i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>{{message}}</h5>
+            
+            <div class='imgCardBox' ng-repeat="painting in paintings | orderBy:'-Year'" ng-if='painting.Category ===  filtText'>
+                <div class="imgCardView">
+                    <img class='img-responsive' alt="" src="http://adele.derosee.info/Work/Small/{{painting.id_Work}}.jpg" />
+                    <div class='imgCardDescr'>
+                        <h4>{{painting.Title}}<br>
+                        {{painting.Year}}</h4>
+                        <p class='icon-links'>
+                            <a rel="paintings_group" class="fancybox" href="http://adele.derosee.info/Work/Big/{{painting.id_Work}}.jpg" ><span class='glyphicon glyphicon-image'></span></a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!--
+                <div class="imgCardView">
+                    <img class='img-responsive' alt="" src="http://adele.derosee.info/Work/Small/{{painting.id_Work}}.jpg" />
+                        <div class='imgCardDescr'>
+                            <h4>{{painting.Title}}</h4>
+                            {{painting.Year}}
+                            <p class='icon-links'>
+                                <a rel="paintings_group" class="fancybox" href="http://adele.derosee.info/Work/Big/{{painting.id_Work}}.jpg" ><span class='glyphicon glyphicon-image'></span></a>
+                            </p>
+                        </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                

@@ -1,0 +1,173 @@
+html { position: relative; min-height: 100%;}
+
+body {background:rgb(47,47,47); padding:30px;color:rgb(153,153,153);margin-top: 2em;
+	font:140% "Lucida Grande","Lucida Sans Unicode",sans-serif;}
+
+a 			{color:#ccc;text-decoration:none;border-bottom:1px;}
+a:visited 	{color:whitesmoke;}
+a:focus 	{color:whitesmoke;}
+//a:hover 	{color:#ffffff;}  //border-bottom:1px solid #fff;
+
+header {min-height:70px;vertical-align:middle;}
+header div {vertical-align:middle;}
+.navbar {border:solid black 0px;background:rgb(47,47,47);}
+
+.nav .active {background:grey;}
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus { background: rgb(55,55,55); } // rgb(51,122,183) ;rgb(17,153,204);
+
+.nav-stacked li > a:focus, .nav > li > a:hover {color:darkgrey;}
+
+img {padding:10px;}
+
+.parFirstLetter::first-letter { 
+    font-size: 150%;
+}
+
+.parFirstLetter {
+   text-indent:40px;
+}
+
+
+.imgCardBox {float:left; height:300px; width:300px; padding:50px;text-align:center;}
+
+.imgCardView {margin:0px;  overflow: hidden; display:inline-block;
+    position: relative;text-align: center; cursor: default;}
+
+.imgCardView .imgCardDescr {
+    width: 100%;
+    margin-left:0px;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+	top: auto;
+	bottom: 0;
+	padding: 1em;
+	height: 5.75em;
+    opacity: 0.75; background-color:darkgrey;
+	//background: transparent;
+	color: #3c4a50;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+    }
+
+.imgCardView img {
+    display: block;
+    position: relative;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+.imgCardView:hover img {
+    -webkit-transform: translate3d(0,-10%,0);
+	transform: translate3d(0,-10%,0);
+}
+
+.imgCardView h4 {
+    //text-transform: uppercase;
+    color: black; //#fff;
+    text-align: center;
+    position: relative;
+    font-size: 11px;
+    padding: 10px;
+    background: darkgrey; //rgba(0, 0, 0, 0.6);
+	float: left;
+	margin: 0px;
+	display: inline-block;
+}
+
+.imgCardView a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    text-transform: uppercase;
+	color: #fff;
+	border: 1px solid #fff;
+	margin: 50px 0 0 0;
+	background-color: transparent;
+}
+
+.imgCardView a.info:hover { box-shadow: 0 0 5px #fff;}
+
+.imgCardView p.icon-links a {
+	float: right;
+	color: #3c4a50;
+	font-size: 1.4em;
+}
+
+.imgCardView:hover p.icon-links a:hover,
+.imgCardView:hover p.icon-links a:focus {
+	color: #252d31;
+}
+
+.imgCardView h2,
+.imgCardView p.icon-links a {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+}
+
+.imgCardView p.icon-links a span:before {
+	display: inline-block;
+	padding: 8px 10px;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.imgCardView:hover .imgCardDescr,
+.imgCardView:hover h2,
+.imgCardView:hover p.icon-links a {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.imgCardView:hover h2 {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+.imgCardView:hover p.icon-links a:nth-child(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.imgCardView:hover p.icon-links a:nth-child(2) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+.imgCardView:hover p.icon-links a:first-child {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+//--------------------------------
+
+
+a>div { display: none; }
+a:hover>div  { display: inline-block; opacity: 0.4;background-color:black; margin-top:-60px;height:55px;width=100%;}
+
+
+footer {
+    clear: both; padding:20px;position: absolute;
+    z-index: 10; height: 70px; width:100%; bottom:0px;}
+footer div {vertical-align:middle;}
+
+.jumboTitle {
+    margin-top:20px; margin-bottom: 10px;
+    background-image: url('../images/quartet_westdean.jpg');
+    //background-attachment: fixed;
+    background-position: 0% 40%; background-size: cover;background-repeat: no-repeat;
+    color: white;
+    min-height:320px;
+    text-shadow: grey 0.3em 0.3em 0.3em;
+}
+
+.jumboExhib {background:rgb(47,47,47);}
+
+.groupon {padding:8px;}
+
+.table.table-borderless tr td {border-width:0;}

@@ -1,0 +1,79 @@
+<div class='container' ng-controller='ExhibitionsCNTRLR'>
+    <div class='row'>
+        <div class='media' class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class='form-group form-inline'>
+                <div class='input-group col-md-offset-3'><h3>Exhibitions</h3> </div>
+                <div class='input-group pull-right'>
+                    <input type='search' class='form-control' ng-model='searchStringExhib' placeholder='filter by ...' />
+                </div>
+                <div class='pull-right groupon'>
+                    <span class='glyphicon glyphicon-search'></span>
+                </div>
+            </div>
+
+
+            <h3 class='col-sm-offset-1'>All Exhibitions</h3>
+            <div style='clear:both;'></div>
+            <h5 ng-if="!showExhibitions"><span class="sr-only">Loading all exhibitions...</span><i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>{{message}}</h5>
+            <table class='table table-hover table-condensed table-borderless'>
+                <tbody>
+                    <tr ng-repeat="exhibition in allExhibitions">
+                        <td ><span class='media-heading' ng-show="exhibition.title != null">{{exhibition.title}}
+                            </span>
+                            <span ng-show="exhibition.venueName != '' && exhibition.title != ''"> - </span>
+                            {{exhibition.venueName}}<span ng-if='!future(exhibition.to)'>till {{exhibition.to}}</span></td>
+                        <td><span class='pull-right'>{{exhibition.to | date:'yyyy'}}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+
+
+
+
+
+            <h3 class='col-sm-offset-1'>Solos</h3>
+            <div style='clear:both;'></div>
+            <h5 ng-if="!showExhibsSolos"><span class="sr-only">Loading Solo exhibitions...</span><i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>{{message}}</h5>
+            <table class='table table-hover table-condensed table-borderless'>
+                <tbody>
+                    <tr ng-repeat="exhibition in exhibsSolos | searchFor:searchStringExhib | orderBy:'-To'">
+                        <td ><span class='media-heading' ng-show="exhibition.Title != null">{{exhibition.Title}}
+                            </span>
+                            <span ng-show="exhibition.Gallery != '' && exhibition.Title != ''"> - </span>
+                            {{exhibition.Gallery}}<span ng-if='!future(exhibition.To)'>till {{exhibition.To}}</span></td>
+                        <td><span class='pull-right'>{{exhibition.To | date:'yyyy'}}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+            <div style='clear:both;'></div>
+            <h3 class='col-sm-offset-1'>Groups</h3>
+
+            <h5 ng-if="!showExhibsGroups"><span class="sr-only"><i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>Loading Group exhibitions...</span>{{message}}</h5>
+            <table class='table table-hover table-condensed table-borderless'>
+                <tbody>
+                    <tr ng-repeat="exhibition in exhibsGroups | searchFor:searchStringExhib | orderBy:'-To'">
+                        <td><span class='media-heading' ng-show="exhibition.Title != null">{{exhibition.Title}}
+                            </span>
+                            <span ng-show="exhibition.Gallery != '' && exhibition.Title != ''"> - </span>
+                            {{exhibition.Gallery}}<span ng-if='future(To)'>till {{exhibition.To}}</span></td>
+                        <td><span class='pull-right'>{{exhibition.To | date:'yyyy'}}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+<div style='clear:both;'><br /><br /><br /><br /></div>

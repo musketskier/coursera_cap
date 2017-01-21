@@ -1,0 +1,57 @@
+    <header class="">
+
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-xs-7 col-sm-8">
+                    <h1>Adele Wagstaff</h1>
+                </div>
+                <div class="col-xs-5 col-sm-3 pull-right">
+                    <div class="nav navbar-nav" style="padding: 40px 10px;">
+                        
+                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/pages/Adele-Wagstaff-Painting/200923683272959?fref=ts" target='_new'><i class="fa fa-facebook"></i></a>
+                        
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/share" data-url="http://www.adelewagstaff.co.uk" data-related="@adelewagstaff" data-count="none" target='_new'><i class="fa fa-twitter"></i></a>
+
+                        <a class="btn btn-social-icon" href="mailto:painting@adelewagstaff.co.uk?Subject=About%20Site:%20adelewagstaff.co.uk"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" ng-controller="HeaderCNTRLR">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{ active: isActive('/') }"><a ui-sref="app">
+                        <span class="glyphicon glyphicon-home"
+                         aria-hidden="true"></span> Home</a></li>
+                    <li ng-class="{ active: isActive('/biography') }"><a ui-sref="app.biography"><i class="fa fa-book fa-fw" aria-hidden="true"></i>  Biography</a></li>
+ 
+                    <li ng-class="{ active: isActive('/paintings') }"><a ui-sref="app.paintings"><span class="glyphicon glyphicon-blackboard"
+                         aria-hidden="true"></span> Gallery</a></li>
+                    
+                    <li ng-class="{ active: isActive('/exhibitions') }"><a ui-sref="app.exhibitions"><span class="glyphicon glyphicon-picture"
+                         aria-hidden="true"></span> Exhibitions</a></li>
+                    
+                    <li ng-class="{ active: isActive('/teachings') }"><a ui-sref="app.teachings"><span class="glyphicon glyphicon-education"
+                         aria-hidden="true"></span> Teaching</a></li>
+                    
+                    <li ng-class="{ active: isActive('/publications') }"><a ui-sref="app.publications"><span class="glyphicon glyphicon-book"
+                         aria-hidden="true"></span> Publications</a></li>
+                    
+                    <li ng-class="{ active: isActive('/blogs') }"><a ui-sref="app.blogs"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i> Blogs</a></li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav> 

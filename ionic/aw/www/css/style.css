@@ -1,0 +1,4 @@
+/* Empty. Add your own CSS if you like */
+ion-content,ion-side-menu { color:rgb(153,153,153);background:rgb(47,47,47);padding:15px;}
+h1,h2 {color:rgb(153,153,153);}
+td {padding:5px;}
