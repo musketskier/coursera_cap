@@ -18,7 +18,7 @@ include('functions.php');
    $accept  = $_SERVER['HTTP_ACCEPT'];       $remIP = $_SERVER['REMOTE_ADDR'];
 
 // ------ forgery? -----------
-   if(!$awxs) { $respCode = '403'; require('view.php'); }
+   //if(!$awxs) { $respCode = '403'; require('view.php'); }
 
 // ------- implemented ? ------
    $resource = 'resources/'.explode("/",$request)[0].'.php';
